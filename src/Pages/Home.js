@@ -5,7 +5,8 @@ import { NOWPLAYING_API_URL } from "../constants/Constants";
 import { Box, styled } from "@mui/system";
 import Banner from "../Components/Banner";
 import UpNext from "../Components/UpNext";
-import Slide from "../Components/Slide";
+import MoviesCard from '../Components/movieList/MoviesCard'
+
 
 const Container = styled(Box)`
     padding: 0 115px !important;
@@ -38,11 +39,7 @@ const Home = () => {
                     <Banner movies={movies} />
                     <UpNext movies={movies} />
                 </Wrapper>
-                <Slide movies={movies} />
-                <Slide movies={movies} />
-                <Slide movies={movies} />
-                <Slide movies={movies} />
-                <Slide movies={movies} />
+                <MoviesCard movieList={movies}/>
             </Container>
     </>
   );

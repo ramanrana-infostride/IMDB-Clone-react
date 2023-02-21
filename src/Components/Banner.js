@@ -24,7 +24,7 @@ const StyledBanner = styled("img")({
 
 const Banner = ({ movies }) => {
   return (
-    <Box style={{ width: "65%" }}>
+    <Box style={{ width: "65%"   }}>
       <Carousel
         swipeable={false}
         draggable={false}

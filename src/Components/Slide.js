@@ -52,6 +52,8 @@ const Slide = ({ movies }) => {
               alt="banner"
             />
             <Title>{movie.original_title}</Title>
+            <Title>{movie?movie.vote_average:""}</Title>
+            <Title>{movie ? movie.overview.slice(0,118)+"..." : ""}</Title>
           </>
         ))}
       </Carousel>

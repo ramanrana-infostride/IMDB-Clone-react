@@ -3,6 +3,8 @@ import { AppBar,Toolbar,styled,Box,Typography,InputBase } from '@mui/material'
 import { LogoUrl } from '../../constants/Constants'
 import { Menu,BookmarkAdd, ExpandMore } from '@mui/icons-material'
 import HeaderMenu from './HeaderMenu'
+import { Link } from 'react-router-dom'
+import { routePath } from '../../constants/route'
 
 const StyledToolBar=  styled(Toolbar)`
 background : #121212;
@@ -57,7 +59,7 @@ const Header = () => {
   return (
     <AppBar position='static'>
             <StyledToolBar >
-                <Logo src={LogoUrl} alt='Logo'/>
+               <Link to={routePath.home}><Logo src={LogoUrl} alt='Logo'/></Link> 
                 <Box   onClick={handleClick}>
                     <Menu/>
                     <Typography>Menu</Typography>                            
@@ -70,7 +72,7 @@ const Header = () => {
                  <Typography>watchList</Typography>
                 </Box>
                 <Typography>Sign In</Typography>
-                <Box>
+                <Box>   
                     <Typography>EN</Typography>
                     <ExpandMore/>
                 </Box>
